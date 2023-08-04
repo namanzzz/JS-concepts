@@ -1,0 +1,58 @@
+<!-- DOM combines the JS and html, it gives the javascript full control of the webpage -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Object Model</title>
+
+</head>
+
+<body>
+    
+    <button>First button</button>
+    <button class="js-btn">Second Button</button>
+
+    <script>
+       console.log(document.querySelector('button')) //can get any element from the page and put inside our javascript
+       console.log(document.querySelector('button').innerHTML)
+
+
+
+       document.querySelector('button')
+          .innerHTML='changed First button'
+
+       document.querySelector('.js-btn').innerHTML='Changed second button' //class selector
+       const buttonElement = document.querySelector('.js-btn')
+       console.log(buttonElement)
+       console.log(typeof buttonElement)
+
+       // console.log(document.querySelector('body'))
+      // console.log(document.querySelector('script'))
+ 
+        /* 
+        console.log(document.title)
+        document.title = 'New title'
+
+        // document.body.innerHTML='Start Right fucking now'
+        document.title='DOM' 
+
+        console.log(document.body)
+        console.log(typeof document.body)
+        console.log(document.body.innerHTML)
+
+
+        // changes all the html inside to 'Changed'
+        document.body.innerHTML = 'Changed';
+
+        // can also insert the new html
+    document.body.innerHTML='<button> New HTML button </button>'
+    */
+    
+</script>
+
+
+</body>
+
+</html>

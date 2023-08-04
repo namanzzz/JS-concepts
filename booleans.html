@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booleans</title>
+
+</head>
+
+<body>
+    <script>
+       //console.log(typeof true)
+       //console.log(typeof false)
+       //console.log(typeof 'true')
+       //console.log(5<6)
+       //console.log(5>6)
+
+
+       //difference between == and ===
+       // == tries to convert both into same value (5 in below example)
+       /* console.log(5 == '5.000')  
+       console.log(5 === '5') //gives accurate result
+       const age = 16
+       if(age>=18){
+        console.log('Yess u can drive')
+        console.log('Have the key !')
+       }
+       else if(age>=16){
+        console.log("Your almost there in a year or two")
+       }
+       else{
+        console.log("You cant drive my lil' friend")
+       }
+       */
+
+       /*
+       if(8){
+        console.log('truthy value')
+       }
+
+       // only Falsy values => false,0,'',NaN,undefined, null
+       const cartItems = 34
+       if(cartItems){
+        console.log('cart has some items')
+       }
+       // also works with logical operators
+       console.log(!23) 
+       console.log(!'Naman')
+       console.log(!'')
+       console.log(7 && !12)
+
+       console.log('Naman'*2) //NaN
+       
+       //let Naman
+       //console.log(Naman)  // undefined
+
+       const Naman=undefined
+       console.log(Naman)
+       */
+
+
+       
+       // ternary operator, can be saved in a variable
+       const res = NaN ? 'han bhai m hi hun truthy' : 'falsy'
+       console.log(res)
+
+
+       // guard variable - short circuit evaluation if first value is falsy(for &&)
+       const result = false && 'Hello brother'
+       const result2 = true && 'Hello again brother'
+       console.log(result)
+       console.log(result2)
+
+       const result3 = 'Indian Rupee' || NaN
+       const result4 = NaN || 'Russian Ruble'
+       console.log(result3)
+       console.log(result4)
+
+    </script>
+</body>
+
+</html>

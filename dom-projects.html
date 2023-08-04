@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM - project</title>
+    <style>
+
+    body{
+        font-family: Arial;
+        
+    }
+
+    .subscribe-button{
+        
+        border: none;
+        background-color: black;
+        border-radius: 20px;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        cursor:pointer;
+        margin-bottom: 35px;
+
+    }
+
+    .is-subscribed{
+
+        color: black;
+        background-color: rgb(240,240,240)
+
+    }
+
+    .cost-input{
+        font-size: 15px;
+        padding-top: 10px;
+        /*padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;*/
+        padding: 10px;
+
+
+    }
+
+    .calculate-button{
+        border: none;
+        /*padding: verticle padding, horizontal padding*/
+        padding: 12px 15px;
+        font-size: 15px;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+
+    }
+
+   
+
+
+    </style>
+
+</head>
+
+
+ <p>YouTube Subscribe Button</p>
+ <button onclick="
+ subscribe()
+ "class="js-subscribe-btn subscribe-button">
+ Subscribe</button>
+
+ <p>Amazon Shipping Calculator</p>
+ <p>Orders under $40 = +$10 shipping.</p>
+ <p>Orders over $40 = FREE shipping.</p>
+
+ <input class="js-cost-input cost-input" placeholder="Cost of order" onkeydown="
+  //console.log(event.key)
+  handleCostKeydown(event)
+">
+ <button onclick="
+ calculate()
+ " class="calculate-button" >Calculate</button>
+ <p class="js-total-cost"></p>
+
+ <!-- innerText avoids extra spaces -->
+
+ 
+    <script>
+        // console.log(document.querySelector('.js-subscribe-btn').innerHTML)
+
+        // javascript extra properties
+        // to convert a number into string Num = String('Num')
+        // console.log('23'-3) is equal to 20 it automatically converts string to number in case of operators -,*,/ --> TYPE COERCION/CONVERSION
+
+         // window object contains everything which is a part of the browser
+         // A built-in object which represents the browser
+         window.console.log('window')
+         window.document
+         window.alert
+
+        function subscribe(){
+
+            const buttonElement = document.querySelector('.js-subscribe-btn')
+
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed'
+                buttonElement.classList.add('is-subscribed')
+            }
+            else if (buttonElement.innerHTML === 'Subscribed') {
+                buttonElement.innerHTML = 'Subscribe'
+                buttonElement.classList.remove('is-subscribed')
+            }
+
+        }
+
+        function handleCostKeydown(event){
+            console.log(event.key)
+            if (event.key === 'Enter') {
+                calculate()
+            }
+        }
+
+        function calculate(){
+    
+            let amount =   document.querySelector('.js-cost-input').value
+           
+           
+            //console.log(document.querySelector('input').value)
+            //  .value property is used for textbox values
+            amount = parseInt(amount)
+            // or amount = Number(amount)
+            if(amount<40){
+                amount+=10
+            }
+            document.querySelector('.js-total-cost').innerHTML = `$${amount}` 
+        
+        }
+
+        
+        
+
+    </script>
+
+
+</body>
+
+</html>

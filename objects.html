@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects</title>
+
+</head>
+
+<body>
+    <script>
+        // An object groups multiple values together
+       /* const product = {
+            name: 'Laptop',
+            price: 29000
+        };
+        console.log(product)
+        console.log(product.name) //consoles value associated with name property
+        console.log(product.price)
+
+        product.name = 'Bike'
+        console.log(product)
+        product.newProperty = true
+        console.log(product)
+
+        delete product.newProperty
+        console.log(product)
+        */
+
+
+        /*
+       const product2 = {
+            name: 'shirt',
+            ['delivery time']: '21 days',
+            //nested objects
+            rating:{
+                stars:4.5,
+                count:67
+            },
+            fun: function func1(){
+                console.log('function inside a object')
+            }
+       };
+       console.log(product2)
+       console.log(product2.name)
+       console.log(product2['name'])
+       console.log(product2['cost'])
+       product2['cost']=3000
+       console.log(product2.rating.stars)
+       product2.fun()
+
+       console.log(typeof console)
+       console.log(typeof console.log)
+       
+
+       // JavaScript object notation JSON
+       // To convert a object into JSON format
+       // JSON format only uses double quote strings and is understood by every programming language, is used to transmit the data  between two computers
+
+       console.log(product2)
+       console.log(JSON.stringify(product2))
+       console.log(typeof JSON.stringify(product2))
+
+       console.log(JSON.parse(JSON.stringify(product2)))
+
+
+
+       // localStorage
+*/
+ console.log('hello'.length)
+ console.log('Naman'.toUpperCase())
+
+// object reference 
+const object1={
+    'Name':'Naman',
+    'Description': 'Highly skilled individual'
+}
+
+const object2 = object1 // refers to the same memory location 
+console.log(object1)
+object1.Name='Naman Matoliya'
+console.log(object2)
+object2.Description='Highly skilled Individual'
+console.log(object1)
+
+const object3 = {
+    'Name': 'Naman Matoliya',
+    'Description': 'Highly skilled Individual'
+}
+
+console.log(object1 === object3)
+console.log(object1===object2)
+
+
+// object shortcut
+const object4={
+    message:'Well Good Job Man!',
+    Name:'Naman'
+}
+<!-- const message = object4.message -->
+//const {message} = object4 //shortcut -- called as destructuring
+const {message,Name}=object4
+console.log(message)
+console.log(Name)
+
+
+const object5 = {
+    //message:message
+    message, // short hand property
+    /* method: function func1(){
+        console.log('method :)')
+    }
+    */
+    //shortcut -- shorthand method syntax
+    method(){
+        console.log('method :)')
+    }
+}
+console.log(object5)
+object5.method()
+
+
+</script>
+
+
+</body>
+
+</html>

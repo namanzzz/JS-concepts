@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors</title>
+
+</head>
+
+<body>
+    <p>Rock Paper Scissors</p>
+
+    <button onclick="
+    alert(func())
+ ">Rock</button>
+
+
+    <button onclick="
+ const randomNumber2 = Math.random()
+ if(randomNumber2>0 && randomNumber2<=1/3){
+    //console.log('rock')
+    alert('computer selected rock so you have won the game')
+ }
+ else if(randomNumber2>1/3 && randomNumber2<=2/3){
+    alert('Computer also selected paper so TIE!!!')
+ }
+ else{
+    alert('you have lost the game as computer selected scissor')
+ }
+
+ ">Paper</button>
+
+
+    <button onclick="
+ const randomNumber3 = Math.random()
+ if(randomNumber3>0 && randomNumber3<=1/3){
+    //console.log('rock')
+    alert('computer selected rock so you have lost the game')
+ }
+ else if(randomNumber3>1/3 && randomNumber3<=2/3){
+    alert('Computer selected paper so you have won the game!!!')
+ }
+ else{
+    alert('Computer also selected scissor so TIE!!!')
+    //let randomNumber3 = 34 its allowed to do in let and const but not in var
+    // variable declared in a scope stays in the scope
+ }
+ ">Scissors</button>
+
+
+    <script>
+      
+        function func(){
+             const randomNumber = Math.random()
+             let verdict = NaN
+            if (randomNumber > 0 && randomNumber <= 1 / 3) {
+                //console.log('rock')
+                //alert('computer also selected rock so TIE!!!')
+                verdict = 'computer also selected rock so TIE!!!';
+            }
+            else if (randomNumber > 1 / 3 && randomNumber <= 2 / 3) {
+                verdict='Your have lost the game as computer selected paper';
+            }
+            else {
+                verdict='You have won the game as computer selected scissor';
+            }
+           return verdict
+
+        }
+
+    </script>
+</body>
+
+</html>
